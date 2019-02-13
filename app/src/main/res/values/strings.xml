@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Endava Library</string>
+    <string name="add_book_name">Add book</string>
     <string name="plus_button_text">Add new book</string>
     <string name="search_button_text">Search a book</string>
     <string name="update_button_text">Update book info</string>
     <string name="delete_button_text">Delete a book</string>
-    <string name="libraryTexr">Library</string>
+    <string name="libraryText">Library</string>
 </resources>
