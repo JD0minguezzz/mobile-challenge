@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.5"
-                android:text="@string/libraryTexr"
+                android:text="@string/libraryText"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/roboto_condensed_bold_italic"
@@ -57,6 +57,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/addBookButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
