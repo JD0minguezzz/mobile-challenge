@@ -58,6 +58,7 @@
 
             <Button
                 android:id="@+id/addBookButton"
+                android:onClick="addBook"
                 android:background="@drawable/button_pressed"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
