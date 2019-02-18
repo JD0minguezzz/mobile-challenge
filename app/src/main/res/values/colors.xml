@@ -6,4 +6,6 @@
     <!-- color name="currentColor">#000000</color-->
     <color name="endavaOrange">#DD7500</color>
     <color name="endavaDarkOrange">#DD5800</color>
+    <color name="endavaWhite">#FFFFFF</color>
+    <color name="buttonPressed">#EEEEEE</color>
 </resources>

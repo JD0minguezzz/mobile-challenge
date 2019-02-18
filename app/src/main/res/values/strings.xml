@@ -4,5 +4,5 @@
     <string name="search_button_text">Search a book</string>
     <string name="update_button_text">Update book info</string>
     <string name="delete_button_text">Delete a book</string>
-    <string name="libraryTexr">Library</string>
+    <string name="libraryText">Library</string>
 </resources>
