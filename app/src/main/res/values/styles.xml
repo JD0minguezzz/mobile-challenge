@@ -9,8 +9,11 @@
     </style>
 
     <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@color/endavaOrange</item>
-        <item name="colorPrimaryDark">@color/endavaDarkOrange</item>
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- item name="android:windowBackground">@color/endavaOrange</item -->
+        <item name="android:windowBackground">@color/appBackground</item>
+        <item name="colorPrimaryDark">@color/appBackgroundDark</item>
     </style>
 
     <style name="AppThemeBackButton" parent="Theme.AppCompat.Light.NoActionBar">
