@@ -5,4 +5,7 @@
     <string name="update_button_text">Update book info</string>
     <string name="delete_button_text">Delete a book</string>
     <string name="libraryText">Library</string>
+    <string name="startButton">Start</string>
+    <string name="registeredText">"  Endava"</string>
+    <string name="initialMessage">Welcome to the Endava Library app, tap the start button and go!</string>
 </resources>

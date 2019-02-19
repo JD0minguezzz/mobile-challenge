@@ -11,8 +11,9 @@
     <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@color/endavaOrange</item>
-        <item name="colorPrimaryDark">@color/endavaDarkOrange</item>
+        <!-- item name="android:windowBackground">@color/endavaOrange</item -->
+        <item name="android:windowBackground">@color/appBackground</item>
+        <item name="colorPrimaryDark">@color/appBackgroundDark</item>
     </style>
 
 </resources>

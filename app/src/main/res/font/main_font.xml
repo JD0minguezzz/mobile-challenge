@@ -24,4 +24,8 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/roboto_condensed_light" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/ubuntu_bold" />
 </font-family>
