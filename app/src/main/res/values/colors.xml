@@ -5,7 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="endavaOrange">#DD7500</color>
     <color name="endavaDarkOrange">#DD5800</color>
-    <color name="endavaLightOrange">#DD8B00</color>
+    <color name="lightOrange">#DD8B00</color>
     <color name="endavaWhite">#FFFFFF</color>
     <color name="buttonPressed">#E0E0E0</color>
     <color name="buttonBorder">#9E9E9E</color>

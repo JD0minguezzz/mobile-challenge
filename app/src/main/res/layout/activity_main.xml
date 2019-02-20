@@ -82,6 +82,7 @@
 
         <Button
             android:id="@+id/addBookButton"
+            android:onClick="addBook"
             android:layout_width="250dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"

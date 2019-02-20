@@ -15,7 +15,7 @@ public class AddBookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_book);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
-        mToolbar.setTitle(getString(R.string.add_book_name));
+        mToolbar.setTitle(getString(R.string.app_name));
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_left_solid);
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -24,6 +24,8 @@ public class AddBookActivity extends AppCompatActivity {
                 finish(); //Finishes current activity
             }
         });
+
+        //FloatingActionButton fab = findViewById(R.id.fab);
     }
 
 }

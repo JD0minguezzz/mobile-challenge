@@ -22,7 +22,6 @@
 
         <activity android:name=".AddBookActivity"
             android:theme="@style/AppThemeBackButton">
-            <!-- android:label="@string/add_book_name" -->
         </activity>
     </application>
 

@@ -7,10 +7,23 @@ import android.support.annotation.NonNull;
 
 @Entity(tableName = "book_table")
 public class Book {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "id")
-    private int bookId;
+    private int id;
 
+    @ColumnInfo(name = "name")
+    private String name;
 
+    @ColumnInfo(name = "author")
+    private String author;
+
+    @ColumnInfo(name = "isbn")
+    private int isbn;
+
+    @ColumnInfo(name = "language")
+    private String language;
+
+    @ColumnInfo(name = "publisher")
+    private String publisher;
 }
