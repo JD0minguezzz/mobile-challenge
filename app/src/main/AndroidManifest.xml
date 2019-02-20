@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AddBookActivity"
+        <activity android:name=".BookListActivity"
+            android:theme="@style/AppThemeBackButton">
+        </activity>
+        <activity android:name=".NewBookActivity"
             android:theme="@style/AppThemeBackButton">
         </activity>
     </application>

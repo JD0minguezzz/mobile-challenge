@@ -26,4 +26,61 @@ public class Book {
 
     @ColumnInfo(name = "publisher")
     private String publisher;
+
+    public Book() {
+        /*this.id = 0;
+        this.name = "Random";
+        this.author = "Jane Doe";
+        this.isbn = 0;
+        this.language = "Klingon";
+        this.publisher = "Random";*/
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getIsbn() {
+        return isbn;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
 }
