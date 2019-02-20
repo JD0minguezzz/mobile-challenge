@@ -25,7 +25,7 @@ public class NewBookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_book);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
-        mToolbar.setTitle(getString(R.string.app_name));
+        mToolbar.setTitle(getString(R.string.new_book));
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_left_solid);
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
