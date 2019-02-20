@@ -11,9 +11,15 @@
     <string name="initialMessage">Welcome to the Endava Library app, tap the start button and go!</string>
     <string name="newBookButton">Add new book</string>
 
+    <string name="new_book_message">Please type the information for the new book you want to add.</string>
     <string name="new_book">New Book</string>
     <string name="hint_name">Name</string>
     <string name="hint_author">Author</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Word not saved because it is empty.</string>
+    <string name="edit_text_author">Author:</string>
+    <string name="edit_text_name">Name:</string>
+    <string name="edit_text_isbn">ISBN:</string>
+    <string name="edit_text_publisher">Publisher:</string>
+    <string name="edit_text_language">Language:</string>
 </resources>
