@@ -5,7 +5,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-//import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.FloatingActionButton;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -41,17 +41,24 @@ public class BookListActivity extends AppCompatActivity {
             }
         });
 
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(BookListActivity.this, NewBookActivity.class);
+                startActivityForResult(intent, NEW_BOOK_ACTIVITY_REQUEST_CODE);
+            }
+        });
+
         mBookViewModel = ViewModelProviders.of(this).get(BookViewModel.class);
 
         mBookViewModel.getAllBooks().observe(this, new Observer<List<Book>>() {
             @Override
-            public void onChanged(@Nullable final List<Book> words) {
+            public void onChanged(@Nullable final List<Book> books) {
                 // Update the cached copy of the words in the adapter.
-                adapter.setWords(words);
+                adapter.setBooks(books);
             }
         });
-
-        //FloatingActionButton fab = findViewById(R.id.fab);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -77,9 +84,9 @@ public class BookListActivity extends AppCompatActivity {
         }
     }
 
-    public void addNewBook(View view) {
+    /*public void addNewBook(View view) {
         Intent intent = new Intent(this, NewBookActivity.class);
         startActivityForResult(intent, NEW_BOOK_ACTIVITY_REQUEST_CODE);
-    }
+    }*/
 
 }

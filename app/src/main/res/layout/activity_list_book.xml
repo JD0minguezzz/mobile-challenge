@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
@@ -21,41 +22,21 @@
             app:layout_constraintTop_toTopOf="parent"
             app:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="4dp"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/endavaWhite"
-                tools:listitem="@layout/recyclerview_item" />
-
-            <!-- RelativeLayout
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom" -->
+            android:background="@color/endavaWhite"
+            tools:listitem="@layout/recyclerview_item" />
 
-            <Button
-                android:id="@+id/newBookButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:onClick="addNewBook"
-                android:text="@string/newBookButton" />
-            <!-- /RelativeLayout -->
-        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_plus_solid" />
+
     </LinearLayout>
-
-    <!-- android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:src="@drawable/ic_plus_solid" / -->
 
 </android.support.constraint.ConstraintLayout>
