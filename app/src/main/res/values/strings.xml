@@ -22,4 +22,6 @@
     <string name="edit_text_isbn">ISBN:</string>
     <string name="edit_text_publisher">Publisher:</string>
     <string name="edit_text_language">Language:</string>
+    <string name="edit_book">Edit</string>
+    <string name="delete_book">Delete</string>
 </resources>

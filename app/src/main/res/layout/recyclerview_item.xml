@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     android:background="@drawable/recyclerview_item_appearance"
     android:layout_marginVertical="5dp"
-    android:layout_marginHorizontal="8dp"
     android:paddingLeft="10dp"
     android:paddingBottom="10dp">
 

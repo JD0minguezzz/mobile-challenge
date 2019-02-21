@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DisplayBookActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class DisplayBookActivity extends AppCompatActivity {
         TextView isbn = (TextView)findViewById(R.id.textIsbnView);
         TextView language = (TextView)findViewById(R.id.textLanguageView);
         TextView publisher = (TextView)findViewById(R.id.textPublisherView);
+
+        //ImageView bookCover = (ImageView)findViewById(R.id.bookCover);
 
         name.setText(getIntent().getStringExtra("NAME"));
         author.setText(getIntent().getStringExtra("AUTHOR"));
