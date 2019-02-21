@@ -17,13 +17,15 @@ import static android.support.v4.content.ContextCompat.startActivity;
 
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookViewHolder> {
 
-    class BookViewHolder extends RecyclerView.ViewHolder {
+    private OnItemClickListener clickListener;
 
-        private final TextView bookNameView;
-        private final TextView bookAuthorView;
-        private final TextView bookIsbnView;
-        private final TextView bookLanguageView;
-        private final TextView bookPublisherView;
+    class BookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
+        public final TextView bookNameView;
+        public final TextView bookAuthorView;
+        public final TextView bookIsbnView;
+        public final TextView bookLanguageView;
+        public final TextView bookPublisherView;
 
         private BookViewHolder(View itemView) {
             super(itemView);
@@ -32,6 +34,14 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
             bookIsbnView = itemView.findViewById(R.id.textIsbnView);
             bookLanguageView = itemView.findViewById(R.id.textLanguageView);
             bookPublisherView = itemView.findViewById(R.id.textPublisherView);
+            itemView.setTag(itemView);
+            itemView.setOnClickListener(this);
+        }
+
+        public void onClick(View view) {
+            if (clickListener != null) {
+                clickListener.onClick(view, getAdapterPosition());
+            }
         }
     }
 
@@ -40,15 +50,9 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
 
     BookListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
 
-    /*private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) { itemClicked(v); }
-    };*/
-
-    /*private void itemClicked(View v) {
-        Intent intent = new Intent(BookListActivity.this, );
-        startActivity(intent);
-    }*/
+    public void setClickListener(OnItemClickListener itemClickListener) {
+        this.clickListener = itemClickListener;
+    }
 
     @Override
     public BookViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -76,8 +80,8 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
         }
     }
 
-    void setBooks(List<Book> words){
-        books = words;
+    void setBooks(List<Book> books){
+        this.books = books;
         notifyDataSetChanged();
     }
 

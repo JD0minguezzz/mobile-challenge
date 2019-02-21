@@ -28,12 +28,7 @@ public class Book {
     private String publisher;
 
     public Book() {
-        /*this.id = 0;
-        this.name = "Random";
-        this.author = "Jane Doe";
-        this.isbn = 0;
-        this.language = "Klingon";
-        this.publisher = "Random";*/
+
     }
 
     public int getId() {

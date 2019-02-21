@@ -10,14 +10,18 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.List;
 
-public class BookListActivity extends AppCompatActivity {
+public class BookListActivity extends AppCompatActivity implements OnItemClickListener{
 
     private BookViewModel mBookViewModel;
+    private BookListAdapter mAdapter;
+    private BookListAdapter.BookViewHolder mHolder;
+    private List<Book> books;
     public static final int NEW_BOOK_ACTIVITY_REQUEST_CODE = 1;
 
     @Override
@@ -29,6 +33,7 @@ public class BookListActivity extends AppCompatActivity {
         final BookListAdapter adapter = new BookListAdapter(this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter.setClickListener(this);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
         mToolbar.setTitle(getString(R.string.app_name));
@@ -54,9 +59,10 @@ public class BookListActivity extends AppCompatActivity {
 
         mBookViewModel.getAllBooks().observe(this, new Observer<List<Book>>() {
             @Override
-            public void onChanged(@Nullable final List<Book> books) {
+            public void onChanged(@Nullable final List<Book> getbooks) {
                 // Update the cached copy of the words in the adapter.
-                adapter.setBooks(books);
+                adapter.setBooks(getbooks);
+                books = getbooks;
             }
         });
     }
@@ -84,9 +90,17 @@ public class BookListActivity extends AppCompatActivity {
         }
     }
 
-    /*public void addNewBook(View view) {
-        Intent intent = new Intent(this, NewBookActivity.class);
-        startActivityForResult(intent, NEW_BOOK_ACTIVITY_REQUEST_CODE);
-    }*/
+    public void onClick(View view, int position) {
+        Intent intent = new Intent(this, DisplayBookActivity.class);
+        Bundle bundle = new Bundle();
+        Book book = books.get(position);
+        bundle.putString("NAME", book.getName());
+        bundle.putString("AUTHOR", book.getAuthor());
+        bundle.putInt("ISBN", book.getIsbn());
+        bundle.putString("LANGUAGE", book.getLanguage());
+        bundle.putString("PUBLISHER", book.getPublisher());
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 
 }
