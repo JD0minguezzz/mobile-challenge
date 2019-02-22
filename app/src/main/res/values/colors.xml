@@ -16,4 +16,5 @@
     <color name="buttonSavePressed">#BDBDBD</color>
     <color name="textMessage">#424242</color>
     <color name="buttonLabel">#d3d3d3</color>
+    <color name="popStartColor">#EEEEEE</color>
 </resources>

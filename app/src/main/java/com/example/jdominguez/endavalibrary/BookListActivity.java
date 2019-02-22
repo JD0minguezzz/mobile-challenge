@@ -91,15 +91,16 @@ public class BookListActivity extends AppCompatActivity implements OnItemClickLi
     }
 
     public void onClick(View view, int position) {
-        Intent intent = new Intent(this, DisplayBookActivity.class);
-        Bundle bundle = new Bundle();
+        //Intent intent = new Intent(this, DisplayBookActivity.class);
+        Intent intent = new Intent(this, PopActivity.class);
+        /*Bundle bundle = new Bundle();
         Book book = books.get(position);
         bundle.putString("NAME", book.getName());
         bundle.putString("AUTHOR", book.getAuthor());
         bundle.putInt("ISBN", book.getIsbn());
         bundle.putString("LANGUAGE", book.getLanguage());
         bundle.putString("PUBLISHER", book.getPublisher());
-        intent.putExtras(bundle);
+        intent.putExtras(bundle);*/
         startActivity(intent);
     }
 

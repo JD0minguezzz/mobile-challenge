@@ -30,4 +30,9 @@
         <item name="android:paddingLeft">8dp</item>
     </style>
 
+    <style name="AppTheme.PopWindow">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
 </resources>
