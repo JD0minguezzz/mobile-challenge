@@ -18,6 +18,9 @@ public interface BookDao {
     @Query("DELETE FROM book_table")
     void deleteAll();
 
+    /*@Query("UPDATE FROM book_table")
+    void deleteAll();*/
+
     //Query that allows to search a book by its name...
     /*@Query("SELECT name, author, isbn, language, publisher FROM book_table WHERE name = :name")
     LiveData<List<Book>> retrieveBookByName(String name);*/

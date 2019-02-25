@@ -4,12 +4,6 @@
         <shape>
             <solid
                 android:color="@color/popWarning" />
-            <!-- gradient
-                android:startColor="@color/buttonSave"
-                android:endColor="@color/buttonPressed"
-                android:angle="270">
-            </gradient -->
-
             <corners
                 android:radius="10dp">
             </corners>

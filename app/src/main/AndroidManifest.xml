@@ -32,9 +32,6 @@
         <activity android:name=".PopActivity"
             android:theme="@style/AppTheme.PopWindow">
         </activity>
-        <activity android:name=".ConfirmationActivity"
-            android:theme="@style/AppTheme.PopWindow">
-        </activity>
     </application>
 
 </manifest>
