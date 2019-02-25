@@ -21,4 +21,6 @@ public class BookViewModel extends AndroidViewModel {
     LiveData<List<Book>> getAllBooks() { return allBooks; }
 
     public void insert(Book book) { repository.insert(book); }
+
+    public void deleteBook(String bookName) { repository.deleteBook(bookName); }
 }

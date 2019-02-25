@@ -3,7 +3,7 @@
     <item>
         <shape>
             <solid
-                android:color="@color/popBackground" />
+                android:color="@color/popWarning" />
             <!-- gradient
                 android:startColor="@color/buttonSave"
                 android:endColor="@color/buttonPressed"
