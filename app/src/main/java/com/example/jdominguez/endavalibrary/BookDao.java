@@ -35,5 +35,12 @@ public interface BookDao {
     /*@Query("SELECT name FROM book_table")
     LiveData<List<Book>> retrieveBook();*/
 
-    //@Query("UPDATE book_table SET name ")
+    @Query("UPDATE book_table SET " +
+            "name = :name," +
+            "author = :author," +
+            "isbn = :isbn," +
+            "language = :language," +
+            "publisher = :publisher " +
+            "WHERE id = :id")
+    void updateBook(String name, String author, int isbn, String language, String publisher, int id);
 }

@@ -32,6 +32,9 @@
         <activity android:name=".PopActivity"
             android:theme="@style/AppTheme.PopWindow">
         </activity>
+        <activity android:name=".EditBookActivity"
+            android:theme="@style/AppThemeBackButton">
+        </activity>
     </application>
 
 </manifest>

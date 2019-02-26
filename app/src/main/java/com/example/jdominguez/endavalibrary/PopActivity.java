@@ -47,6 +47,7 @@ public class PopActivity extends AppCompatActivity {
         TextView publisher = (TextView)findViewById(R.id.publisher);
         ImageButton closeButton = findViewById(R.id.closeButton);
         Button deleteButton = findViewById(R.id.deleteButton);
+        Button editButton = findViewById(R.id.editButton);
 
         //ImageView bookCover = (ImageView)findViewById(R.id.bookCover);
 
@@ -119,6 +120,19 @@ public class PopActivity extends AppCompatActivity {
             }
         });
 
-
+        editButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(PopActivity.this, EditBookActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("NAME", getIntent().getStringExtra("NAME"));
+                bundle.putString("AUTHOR", getIntent().getStringExtra("AUTHOR"));
+                bundle.putString("ISBN", String.valueOf(getIntent().getIntExtra("ISBN", 0)));
+                bundle.putString("LANGUAGE", getIntent().getStringExtra("LANGUAGE"));
+                bundle.putString("PUBLISHER", getIntent().getStringExtra("PUBLISHER"));
+                bundle.putInt("ID", getIntent().getIntExtra("ID", 0));
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
     }
 }

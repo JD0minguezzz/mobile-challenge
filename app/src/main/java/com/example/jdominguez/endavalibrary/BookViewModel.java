@@ -23,4 +23,8 @@ public class BookViewModel extends AndroidViewModel {
     public void insert(Book book) { repository.insert(book); }
 
     public void deleteBook(String bookName) { repository.deleteBook(bookName); }
+
+    public void updateBook(String name, String author, String isbn, String language, String publisher, String id) {
+        repository.updateBook(name, author, isbn, language, publisher, id);
+    }
 }

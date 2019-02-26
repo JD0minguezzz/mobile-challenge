@@ -10,11 +10,13 @@ public class BookRepository {
 
     private BookDao bookDao;
     private LiveData<List<Book>> allBooks;
+    private String[] books;
 
     BookRepository(Application application) {
         BookDatabase db = BookDatabase.getDatabase(application);
         bookDao = db.bookDao();
         allBooks = bookDao.retrieveBook();
+        books = new String[5];
     }
 
     LiveData<List<Book>> getAllBooks() {
@@ -26,6 +28,8 @@ public class BookRepository {
     }
 
     public void deleteBook (String bookName) { new deleteAsyncTask(bookDao).execute(bookName); }
+
+    public void updateBook (String name, String author, String isbn, String language, String publisher, String id) { new updateAsyncTask(bookDao).execute(name, author, isbn, language, publisher, id); }
 
     private static class insertAsyncTask extends AsyncTask<Book, Void, Void> {
 
@@ -53,6 +57,21 @@ public class BookRepository {
         @Override
         protected Void doInBackground(final String... params) {
             asyncTaskDao.deleteBook(params[0]);
+            return null;
+        }
+    }
+
+    private static class updateAsyncTask extends AsyncTask<String, Void, Void> {
+
+        private BookDao asyncTaskDao;
+
+        updateAsyncTask(BookDao dao) {
+            asyncTaskDao = dao;
+        }
+
+        @Override
+        protected Void doInBackground(final String... params) {
+            asyncTaskDao.updateBook(params[0], params[1], Integer.parseInt(params[2]), params[3], params[4], Integer.parseInt(params[5]));
             return null;
         }
     }

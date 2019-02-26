@@ -114,6 +114,7 @@ public class BookListActivity extends AppCompatActivity implements OnItemClickLi
         bundle.putInt("ISBN", book.getIsbn());
         bundle.putString("LANGUAGE", book.getLanguage());
         bundle.putString("PUBLISHER", book.getPublisher());
+        bundle.putInt("ID", book.getId());
         intent.putExtras(bundle);
         startActivity(intent);
     }

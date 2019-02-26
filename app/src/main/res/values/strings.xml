@@ -12,6 +12,7 @@
     <string name="newBookButton">Add new book</string>
 
     <string name="new_book_message">Please type the information for the new book you want to add.</string>
+    <string name="edit_book_message">Please type the updated information for the book you want to edit.</string>
     <string name="new_book">New Book</string>
     <string name="hint_name">Name</string>
     <string name="hint_author">Author</string>
@@ -24,4 +25,5 @@
     <string name="edit_text_language">Language:</string>
     <string name="edit_book">Edit</string>
     <string name="delete_book">Delete</string>
+    <string name="update_book_button">Update</string>
 </resources>
