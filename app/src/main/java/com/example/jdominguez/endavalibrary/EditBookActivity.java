@@ -25,7 +25,7 @@ public class EditBookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_book);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
-        mToolbar.setTitle(getString(R.string.new_book));
+        mToolbar.setTitle(getIntent().getStringExtra("NAME"));
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_left_solid);
 
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -60,6 +60,8 @@ public class EditBookActivity extends AppCompatActivity {
                         getTextOrHint(updateBookPublisher),
                         String.valueOf(getIntent().getIntExtra("ID", 0))
                 );
+                setResult(RESULT_OK, null);
+                finish();
             }
         });
     }

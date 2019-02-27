@@ -3,6 +3,7 @@
     <item>
         <shape>
             <solid
+                android:background="@android:color/transparent"
                 android:color="@color/popWarning" />
             <corners
                 android:radius="10dp">

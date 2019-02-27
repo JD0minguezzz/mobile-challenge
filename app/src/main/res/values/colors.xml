@@ -20,4 +20,5 @@
     <color name="popBackground">#E4EBEE</color>
     <color name="popText">#000000</color>
     <color name="popWarning">#A03033</color>
+    <color name="bookNameItem">#424242</color>
 </resources>

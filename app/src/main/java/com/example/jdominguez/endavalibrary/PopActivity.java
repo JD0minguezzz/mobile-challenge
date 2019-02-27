@@ -19,6 +19,7 @@ import android.widget.TextView;
 public class PopActivity extends AppCompatActivity {
 
     private BookViewModel mBookViewModel;
+    public static final int REQUEST_EXIT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstaceState) {
@@ -76,7 +77,10 @@ public class PopActivity extends AppCompatActivity {
             }*/
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(PopActivity.this);
+                //AlertDialog.Builder builder = new AlertDialog.Builder(PopActivity.this);
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(PopActivity.this, R.style.AppTheme_AlertDialog));
+
                 //AlertDialog warningDialog = builder.create();
                 LayoutInflater inflater = getLayoutInflater();
                 View warningDialogView = inflater.inflate(R.layout.activity_confirmation, null);
@@ -131,8 +135,19 @@ public class PopActivity extends AppCompatActivity {
                 bundle.putString("PUBLISHER", getIntent().getStringExtra("PUBLISHER"));
                 bundle.putInt("ID", getIntent().getIntExtra("ID", 0));
                 intent.putExtras(bundle);
-                startActivity(intent);
+                startActivityForResult(intent, REQUEST_EXIT);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == REQUEST_EXIT) {
+            if (resultCode == RESULT_OK) {
+                this.finish();
+
+            }
+        }
     }
 }

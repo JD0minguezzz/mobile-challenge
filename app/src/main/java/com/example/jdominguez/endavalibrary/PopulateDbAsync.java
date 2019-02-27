@@ -12,7 +12,7 @@ public class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected Void doInBackground(final Void... params) {
-        mDao.deleteAll();
+        /*mDao.deleteAll();
         Book book = new Book();
         book.setId(1);
         book.setName("Cien Años de Soledad");
@@ -28,7 +28,7 @@ public class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
         book.setIsbn(5678);
         book.setLanguage("Spanish");
         book.setPublisher("Penguin");
-        mDao.insert(book);
+        mDao.insert(book);*/
         return null;
     }
 }
