@@ -12,8 +12,8 @@ public interface BookDao {
     @Insert
     void insert(Book book);
 
-    @Query("DELETE FROM book_table WHERE name = :name")
-    void deleteBook(String name);
+    @Query("DELETE FROM book_table WHERE id = :id")
+    void deleteBook(int id);
 
     @Query("DELETE FROM book_table")
     void deleteAll();

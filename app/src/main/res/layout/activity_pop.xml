@@ -41,7 +41,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:text="Name:"
                 android:textColor="@color/popText"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/name"
@@ -51,7 +51,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_regular"
                 android:text="TextView"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/textView3"
@@ -59,9 +60,9 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_condensed_regular"
-                android:text="Author"
+                android:text="Author:"
                 android:textColor="@color/popText"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/author"
@@ -71,7 +72,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_regular"
                 android:text="TextView"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -81,7 +83,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:text="ISBN:"
                 android:textColor="@color/popText"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/isbn"
@@ -91,7 +93,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_regular"
                 android:text="TextView"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/textView7"
@@ -101,7 +104,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:text="Language:"
                 android:textColor="@color/popText"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/language"
@@ -111,7 +114,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_regular"
                 android:text="TextView"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
             <TextView
                 android:id="@+id/textView9"
@@ -121,7 +125,7 @@
                 android:fontFamily="@font/roboto_condensed_regular"
                 android:text="Publisher:"
                 android:textColor="@color/popText"
-                android:textSize="30dp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:id="@+id/publisher"
@@ -131,11 +135,14 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_regular"
                 android:text="TextView"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:gravity="center_vertical"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
                 <Button

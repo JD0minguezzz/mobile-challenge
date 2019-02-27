@@ -9,6 +9,7 @@
     <color name="endavaWhite">#FFFFFF</color>
     <color name="buttonPressed">#E0E0E0</color>
     <color name="itemBackground">#CFD8DC</color>
+    <color name="itemBackgroundPressed">#C0CCD1</color>
     <color name="buttonBackground">#EEEEEE</color>
     <color name="appBackground">#444F51</color>
     <color name="appBackgroundDark">#363E40</color>
@@ -21,4 +22,6 @@
     <color name="popText">#000000</color>
     <color name="popWarning">#A03033</color>
     <color name="bookNameItem">#424242</color>
+    <color name="editTextBackground">#E0E0E0</color>
+    <color name="editTextStroke">#5B6A6D</color>
 </resources>

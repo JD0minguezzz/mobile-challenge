@@ -27,7 +27,7 @@ public class BookRepository {
         new insertAsyncTask(bookDao).execute(book);
     }
 
-    public void deleteBook (String bookName) { new deleteAsyncTask(bookDao).execute(bookName); }
+    public void deleteBook (String bookId) { new deleteAsyncTask(bookDao).execute(bookId); }
 
     public void updateBook (String name, String author, String isbn, String language, String publisher, String id) { new updateAsyncTask(bookDao).execute(name, author, isbn, language, publisher, id); }
 
@@ -56,7 +56,7 @@ public class BookRepository {
 
         @Override
         protected Void doInBackground(final String... params) {
-            asyncTaskDao.deleteBook(params[0]);
+            asyncTaskDao.deleteBook(Integer.parseInt(params[0]));
             return null;
         }
     }

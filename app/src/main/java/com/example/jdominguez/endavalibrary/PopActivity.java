@@ -32,7 +32,7 @@ public class PopActivity extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8), (int)(height*.7));
+        getWindow().setLayout((int)(width*.75), (int)(height*.65));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -99,7 +99,7 @@ public class PopActivity extends AppCompatActivity {
                 int width = getResources().getDisplayMetrics().widthPixels;
                 int height = getResources().getDisplayMetrics().heightPixels;
 
-                AlertDialog warningDialog = builder.create();
+                final AlertDialog warningDialog = builder.create();
                 warningDialog.show();
                 warningDialog.getWindow().setLayout((int)(width*.8), (int)(height*.3));
 
@@ -110,7 +110,7 @@ public class PopActivity extends AppCompatActivity {
                 confirmDeletionButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        mBookViewModel.deleteBook(getIntent().getStringExtra("NAME"));
+                        mBookViewModel.deleteBook(String.valueOf(getIntent().getIntExtra("ID", 0)));
                         finish();
                     }
                 });
@@ -118,7 +118,7 @@ public class PopActivity extends AppCompatActivity {
                 abortDeletionButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        finish();
+                        warningDialog.cancel();
                     }
                 });
             }
