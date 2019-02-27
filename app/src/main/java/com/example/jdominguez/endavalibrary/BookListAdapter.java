@@ -1,19 +1,12 @@
 package com.example.jdominguez.endavalibrary;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import java.util.List;
-
-import static android.support.v4.content.ContextCompat.startActivity;
 
 public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookViewHolder> {
 
@@ -46,7 +39,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
     }
 
     private final LayoutInflater mInflater;
-    private List<Book> books; // Cached copy of books
+    private List<Book> books;
 
     BookListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
 
@@ -57,7 +50,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
     @Override
     public BookViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = mInflater.inflate(R.layout.recyclerview_item, parent, false);
-        //itemView.setOnClickListener(mOnClickListener);
         return new BookViewHolder(itemView);
     }
 
@@ -65,7 +57,7 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
     public void onBindViewHolder(BookViewHolder holder, int position) {
         if (books != null) {
             Book current = books.get(position);
-            holder.bookNameView.setText(current.getName()); //Retrieves only the name of the book
+            holder.bookNameView.setText(current.getName());
             holder.bookAuthorView.setText(current.getAuthor());
             holder.bookIsbnView.setText(String.valueOf(current.getIsbn()));
             holder.bookLanguageView.setText(current.getLanguage());
@@ -85,8 +77,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.BookVi
         notifyDataSetChanged();
     }
 
-    // getItemCount() is called many times, and when it is first called,
-    // mWords has not been updated (means initially, it's null, and we can't return null).
     @Override
     public int getItemCount() {
         if (books != null)

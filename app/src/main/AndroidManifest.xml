@@ -26,9 +26,6 @@
         <activity android:name=".NewBookActivity"
             android:theme="@style/AppThemeBackButton">
         </activity>
-        <activity android:name=".DisplayBookActivity"
-            android:theme="@style/AppThemeBackButton">
-        </activity>
         <activity android:name=".PopActivity"
             android:theme="@style/AppTheme.PopWindow">
         </activity>

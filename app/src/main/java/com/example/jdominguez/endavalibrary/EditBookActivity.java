@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class EditBookActivity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class EditBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_book);
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
+        Toolbar mToolbar = findViewById(R.id.backButtonToolbar);
         mToolbar.setTitle(getIntent().getStringExtra("NAME"));
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_left_solid);
 
@@ -60,6 +60,9 @@ public class EditBookActivity extends AppCompatActivity {
                         getTextOrHint(updateBookPublisher),
                         String.valueOf(getIntent().getIntExtra("ID", 0))
                 );
+                Toast.makeText(
+                        getApplicationContext(), getIntent().getStringExtra("NAME") + " updated successfully",
+                        Toast.LENGTH_LONG).show();
                 setResult(RESULT_OK, null);
                 finish();
             }

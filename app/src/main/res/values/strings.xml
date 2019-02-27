@@ -17,7 +17,7 @@
     <string name="hint_name">Name</string>
     <string name="hint_author">Author</string>
     <string name="button_save">Save</string>
-    <string name="empty_not_saved">No book created.</string>
+    <string name="empty_not_saved">No book added</string>
     <string name="edit_text_author">Author:</string>
     <string name="edit_text_name">Name:</string>
     <string name="edit_text_isbn">ISBN:</string>

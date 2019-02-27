@@ -11,8 +11,6 @@ import android.widget.EditText;
 
 public class NewBookActivity extends AppCompatActivity {
 
-    public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
-
     private EditText editBookName;
     private EditText editBookAuthor;
     private EditText editBookIsbn;
@@ -24,7 +22,7 @@ public class NewBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_book);
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.backButtonToolbar);
+        Toolbar mToolbar = findViewById(R.id.backButtonToolbar);
         mToolbar.setTitle(getString(R.string.new_book));
         mToolbar.setNavigationIcon(R.drawable.ic_arrow_left_solid);
 

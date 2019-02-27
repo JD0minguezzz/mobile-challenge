@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PopActivity extends AppCompatActivity {
 
@@ -36,21 +37,17 @@ public class PopActivity extends AppCompatActivity {
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
-        //params.x = 0;
-        //params.y = -20;
 
         getWindow().setAttributes(params);
 
-        TextView name = (TextView)findViewById(R.id.name);
-        TextView author = (TextView)findViewById(R.id.author);
-        TextView isbn = (TextView)findViewById(R.id.isbn);
-        TextView language = (TextView)findViewById(R.id.language);
-        TextView publisher = (TextView)findViewById(R.id.publisher);
+        TextView name = findViewById(R.id.name);
+        TextView author = findViewById(R.id.author);
+        TextView isbn = findViewById(R.id.isbn);
+        TextView language = findViewById(R.id.language);
+        TextView publisher = findViewById(R.id.publisher);
         ImageButton closeButton = findViewById(R.id.closeButton);
         Button deleteButton = findViewById(R.id.deleteButton);
         Button editButton = findViewById(R.id.editButton);
-
-        //ImageView bookCover = (ImageView)findViewById(R.id.bookCover);
 
         name.setText(getIntent().getStringExtra("NAME"));
         author.setText(getIntent().getStringExtra("AUTHOR"));
@@ -77,19 +74,12 @@ public class PopActivity extends AppCompatActivity {
             }*/
             @Override
             public void onClick(View view) {
-                //AlertDialog.Builder builder = new AlertDialog.Builder(PopActivity.this);
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(PopActivity.this, R.style.AppTheme_AlertDialog));
 
-                //AlertDialog warningDialog = builder.create();
                 LayoutInflater inflater = getLayoutInflater();
                 View warningDialogView = inflater.inflate(R.layout.activity_confirmation, null);
 
                 builder.setView(warningDialogView);
-                //warningDialog.show();
-
-                /*int width = getResources().getDisplayMetrics().widthPixels;
-                int height = getResources().getDisplayMetrics().heightPixels;*/
 
                 Button confirmDeletionButton = warningDialogView.findViewById(R.id.confirmDeletionButton);
                 Button abortDeletionButton = warningDialogView.findViewById(R.id.abortDeletionButton);
@@ -103,14 +93,15 @@ public class PopActivity extends AppCompatActivity {
                 warningDialog.show();
                 warningDialog.getWindow().setLayout((int)(width*.8), (int)(height*.3));
 
-                //confirmDeletionButton.setOnClickListener();
-
                 mBookViewModel = ViewModelProviders.of(PopActivity.this).get(BookViewModel.class);
 
                 confirmDeletionButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         mBookViewModel.deleteBook(String.valueOf(getIntent().getIntExtra("ID", 0)));
+                        Toast.makeText(
+                                getApplicationContext(), "Book deleted successfully",
+                                Toast.LENGTH_LONG).show();
                         finish();
                     }
                 });
@@ -142,11 +133,9 @@ public class PopActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
         if (requestCode == REQUEST_EXIT) {
             if (resultCode == RESULT_OK) {
                 this.finish();
-
             }
         }
     }
